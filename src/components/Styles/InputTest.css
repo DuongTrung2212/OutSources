@@ -1,0 +1,55 @@
+
+.form{
+  position: relative;
+}
+.form .inputAntd {
+    /* width: 100%;
+    height: 100%; */
+    border: none;
+  }
+  .form label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: transparent;
+  }
+  /* .form label::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #fce38a;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  } */
+  .content-name {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    transition: all 0.3s ease;
+  }
+  /* .form .inputAntd:focus {
+    outline: none;
+  } */
+  .form .inputAntd:focus + .label-name .content-name,
+  .form .inputAntd:valid + .label-name .content-name {
+    transform: translateY(-130%);
+    font-size: 12px;
+    color: #353535;
+    font-weight: 700;
+  }
+  .form .inputAntd:valid,.inputAntd:focus{
+    padding-top: 20px;
+  }
+  /* .form .inputAntd:focus + .label-name::after,
+  .form .inputAntd:valid + .label-name::after {
+    transform: translateX(0%);
+  } */
